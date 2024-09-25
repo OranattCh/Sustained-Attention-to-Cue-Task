@@ -21,10 +21,10 @@ class SACTExp:
         
         print('Can ignore this msg: init_beepStim')
                 
-        return sound.Sound(self.exp_location+'prebeep8bit.wav', secs=self.tBeep, volume = 1.0,stereo=True, hamming=True)
+        return sound.Sound(self.exp_location+'assets/prebeep8bit.wav', secs=self.tBeep, volume = 1.0,stereo=True, hamming=True)
     
     def _cueStim(self):        
-        cue_image = self.exp_location+'images/cue.png'
+        cue_image = self.exp_location+'assets/images/cue.png'
             
         return visual.ImageStim(self.win, cue_image, size=(0.1, 0.1),texRes=128.0, interpolate=True)
 
@@ -49,30 +49,30 @@ class SACTExp:
         return visual.ImageStim(self.win, size=(0.25, 0.25),texRes=128.0, interpolate=True)
     
     def _targetMaskStim(self):        
-        targetMask_image =self.exp_location+'images/Mask.bmp'
+        targetMask_image =self.exp_location+'assets/images/Mask.bmp'
             
         return visual.ImageStim(self.win, targetMask_image, size=(0.25, 0.25),texRes=128.0, interpolate=True)
     
     def _respB(self):
-        resp_image = self.exp_location+'images/target_B.jpg'
+        resp_image = self.exp_location+'assets/images/target_B.jpg'
         resp_x = -0.5;  resp_y = 0
         target_B=visual.ImageStim(self.win, resp_image, name='target_B', pos=(resp_x, resp_y), size=(0.25, 0.25),texRes=128.0, interpolate=True)
         return target_B
     
     def _respD(self):
-        resp_image = self.exp_location+'images/target_D.jpg'
+        resp_image = self.exp_location+'assets/images/target_D.jpg'
         resp_x = -0.18; resp_y = 0
         target_D=visual.ImageStim(self.win, resp_image, name='target_D', pos=(resp_x, resp_y), size=(0.25, 0.25),texRes=128.0, interpolate=True)
         return target_D
     
     def _respP(self):
-        resp_image = self.exp_location+'images/target_P.jpg'
+        resp_image = self.exp_location+'assets/images/target_P.jpg'
         resp_x = 0.18;  resp_y = 0
         target_P=visual.ImageStim(self.win, resp_image, name='target_P', pos=(resp_x, resp_y), size=(0.25, 0.25),texRes=128.0, interpolate=True)
         return target_P
     
     def _respR(self):
-        resp_image = self.exp_location+'images/target_R.jpg'
+        resp_image = self.exp_location+'assets/images/target_R.jpg'
         resp_x = 0.5;   resp_y = 0
         target_R=visual.ImageStim(self.win, resp_image, name='target_R', pos=(resp_x, resp_y), size=(0.25, 0.25),texRes=128.0, interpolate=True)
         return target_R
@@ -269,13 +269,13 @@ class SACTExp:
         # print('check: showed distraction')
         
         if condition.target == 'B':
-            self.visTarget.image = self.exp_location+'images/cue_B.jpg'
+            self.visTarget.image = self.exp_location+'assets/images/cue_B.jpg'
         elif condition.target == 'D':
-            self.visTarget.image = self.exp_location+'images/cue_D.jpg'
+            self.visTarget.image = self.exp_location+'assets/images/cue_D.jpg'
         elif condition.target == 'P':
-            self.visTarget.image = self.exp_location+'images/cue_P.jpg'
+            self.visTarget.image = self.exp_location+'assets/images/cue_P.jpg'
         elif condition.target == 'R':
-            self.visTarget.image = self.exp_location+'images/cue_R.jpg'
+            self.visTarget.image = self.exp_location+'assets/images/cue_R.jpg'
         
         self.visTarget.draw()
         d7 = waitAndFlip(t0 + tFix + self.tBeep + self.tCueDy + tCue + self.tDistraction*3) -t0 -d1 -d2 -d3 -d4 -d5 -d6    

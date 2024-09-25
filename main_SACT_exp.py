@@ -53,8 +53,8 @@ import pandas as pd
 
 from psychopy import gui, visual, core, event, monitors, data
 
-sys.path.append('/Users/oranattch/Documents/GitRepo/PG_ALERT/BR_SACT/')
-# sys.path.append('C:/Users/SINAPSE/Desktop/ALERT_SACT_EEG')
+sys.path.append('/Users/oranattch/Documents/GitRepo/Sustained-Attention-to-Cue-Task/')
+# sys.path.append('C:/Users/SINAPSE/Documents/GitRepo/Sustained-Attention-to-Cue-Task/')
 from main_SACT_fn import SACTExp
 
 # from psychopy import parallel # for headset connection
@@ -70,8 +70,8 @@ if dlg.OK == False:
     core.quit()
 par_info = 'ALERT_SACT_S%s_P%s' % (expInfo['Session'], expInfo['Participant_Code'])
 
-exp_location = '/Users/oranattch/Documents/GitRepo/PG_ALERT/BR_SACT/SACT_EEG/'
-# exp_location = 'C:/Users/SINAPSE/Desktop/ALERT_SACT_EEG/'
+exp_location = '/Users/oranattch/Documents/GitRepo/Sustained-Attention-to-Cue-Task/'
+# exp_location = 'C:/Users/SINAPSE/Documents/GitRepo/Sustained-Attention-to-Cue-Task/'
 
 # init monitor
 winsize = [1920,1080]#[2560,1600]#[1440,900]#[1280,720]#[1024,768]
